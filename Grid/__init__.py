@@ -1,10 +1,9 @@
 class Grid:
-    def __init__(self, size, num_mines, status, revealed_cells, max_cells):
+    def __init__(self, size, num_mines):
         self.size = size
         self.num_mines = num_mines
-        self.status = status
-        self.revealed_cells = revealed_cells
-        self.max_cells = max_cells
+        self.revealed_cells = 0
+        self.max_cells = 0
         self.grid = [[[0,0]for _ in range(size)]for _ in range(size)]
 
         pass

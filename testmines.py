@@ -1,5 +1,5 @@
 """
-Test Print grid
+Test Place mines
 """
 import Grid
 
