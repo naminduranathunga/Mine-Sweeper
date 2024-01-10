@@ -13,7 +13,11 @@ def reveal_cells_recursive(self, x, y):
         self.revealed_cells += 1
         if self.grid[x][y][0] == -1: # mine
             return False
-        
+    elif self.grid[x][y][1] == self.cell_status.CELL_STATUS_FLAGGED:
+        return True
+    else:
+        return True
+
     # for each cell around the given cell
     # if cell is not revealed and not flagged and not a mine then reveal it.
     # if any of it's value is 0 then call this function again for that cell
