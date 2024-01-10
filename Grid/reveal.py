@@ -14,13 +14,10 @@ def reveal(self, x, y):
         raise Exception("Invalid cell")
     
     # check if the cell is already revealed
-    if self.grid[x][y][1] == self.cell_status.CELL_STATUS_REVEALED:
-        # throw exception
-        raise Exception("Cell already revealed")
+    if self.grid[x][y][1] != self.cell_status.CELL_STATUS_REVEALED:
+        # reveal the cell
+        self.grid[x][y][1] = self.cell_status.CELL_STATUS_REVEALED
     
-    # reveal the cell
-    self.grid[x][y][1] = self.cell_status.CELL_STATUS_REVEALED
-
     # check whether it is a mine
     return not (self.grid[x][y][0] == -1)
     #if self.grid[x][y][0] == -1: # mine
