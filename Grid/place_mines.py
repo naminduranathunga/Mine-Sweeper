@@ -1,17 +1,20 @@
 import random
-def place_mines(self, size):
-    x = 0
+def place_mines(self):
 
-    while x < self.num_mines:
-        x = random.randint(0, size)
-        y = random.randint(0, size)
+    size = self.size
+
+    i = 0
+    while i < self.num_mines:
+        x = random.randint(0, size-1)
+        y = random.randint(0, size-1)
 
         if self.grid[x][y][0] == -1:
             continue
         else:
             self.grid[x][y][0] = -1
 
-        x += 1
+        i += 1
+
 
 
 
