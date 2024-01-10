@@ -1,12 +1,18 @@
+"""
+main.py
 
+Author:
+D.R.K. DISANAYAKA - 21/ENG/022
+"""
 import Grid
 
 def play_game(game):
     print("\n\t\tWELCOME TO MINESWEEPER GAME\n")
-    game.print_grid()
-
+    
     while True:
         try:
+            game.print_grid()
+
             option = input("\nEnter your move (e.g., A1F for flag or B2R for reveal): ").upper()
 
             if len(option) == 3 and \

@@ -27,6 +27,7 @@ class Grid:
     ##############################
 
     from .place_mines import place_mines
+    from .place_flag import place_flag
     from .calculate_cell_value import calculate_cell_value
     
 
