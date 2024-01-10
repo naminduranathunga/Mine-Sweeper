@@ -13,11 +13,11 @@ def play_game(game):
         try:
             game.print_grid()
 
-            option = input("\nEnter your move (e.g., A1F for flag or B2R for reveal): ").upper()
+            option = input("\nEnter your move (e.g., AAF for flag or BBR for reveal): ").upper()
 
             if len(option) == 3 and \
-                option[0].isalpha() and option[1].isdigit() and option[2] in 'FR':
-                col, row, command = ord(option[0].upper()) - 65, int(option[1]) - 1, option[2]
+                option[0].isalpha() and option[1].isalpha() and option[2] in 'FR':
+                col, row, command = ord(option[0].upper()) - 65, ord(option[1]) - 1, option[2]
             else:
                 raise ValueError("\nInvalid input. Please enter a valid move.")
 
@@ -28,8 +28,7 @@ def play_game(game):
                 if game.reveal(col,row):
                     if game.revealed_cells == game.max_cells:
                         print("\nCONGRATULATION! YOU WON.\n")
-                    else:
-                        print("\nLocation revealed. Game logic update pending...\n")
+
 
                 else:
                     print("\nGame Over! You uncovered a mine. Start a new game.")
