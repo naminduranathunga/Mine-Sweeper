@@ -31,4 +31,4 @@ def reveal_cells_recursive(self, x, y):
                     self.revealed_cells += 1
                 else:
                     self.reveal_cells_recursive(i, j)
-                    
+    return True

@@ -19,6 +19,7 @@ def play_game(game):
                 game.place_flag(col,row)
 
             elif command == 'R':
+                print(game.grid[col][row][0])
                 if game.reveal(col,row):
                     if game.revealed_cells == game.max_cells:
                         print("\nCONGRATULATION! YOU WON.\n")
