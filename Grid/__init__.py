@@ -1,3 +1,9 @@
+"""
+Initiate Class Grid
+
+Author:
+W.A.H.K.Weerasinghe - 21/ENG/159
+"""
 class Grid:
     def __init__(self, size, num_mines):
         self.size = size
