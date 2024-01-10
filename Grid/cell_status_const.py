@@ -1,0 +1,4 @@
+class cell_status:
+    CELL_STATUS_NOT_REVEALED = 0
+    CELL_STATUS_REVEALED = 1
+    CELL_STATUS_FLAGGED = 2
