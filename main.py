@@ -17,7 +17,7 @@ def play_game(game):
 
             if len(option) == 3 and \
                 option[0].isalpha() and option[1].isalpha() and option[2] in 'FR':
-                col, row, command = ord(option[0].upper()) - 65, ord(option[1]) - 1, option[2]
+                col, row, command = ord(option[0].upper()) - 65, ord(option[1].upper()) - 65, option[2]
             else:
                 raise ValueError("\nInvalid input. Please enter a valid move.")
 
