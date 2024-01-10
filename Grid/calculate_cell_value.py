@@ -1,3 +1,11 @@
+"""
+Function will calculate the cell values
+
+Author:
+W.A.H.K.Weerasinghe - 21/ENG/159
+"""
+
+
 def calculate_cell_value(self):
 
     for x in range(self.size):
