@@ -13,8 +13,8 @@ def place_flag(self,x,y):
         raise Exception("Invalid cell")
     
     # check if already has flag
-    if self.grid[x][y][2] != self.cell_status.FLAG_PLACED:
+    if self.grid[x][y][1] != self.cell_status.CELL_STATUS_FLAGGED:
         # reveal the cell
-        self.grid[x][y][2] = self.cell_status.FLAG_PLACED
-
-    print("Flag was placed")
+        self.grid[x][y][1] = self.cell_status.CELL_STATUS_FLAGGED
+    
+    print("\nFlag was placed\n")
