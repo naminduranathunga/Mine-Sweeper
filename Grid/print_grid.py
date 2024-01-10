@@ -4,9 +4,25 @@ F - Flagged
 . - No mines around
 1-8 - Number of mines around
 
+Author:
+R.A.N.S Ranathunga - 21/ENG/107
 """
 
 import tabulate
+
+def colored_char(char, value):
+    colors = [
+        "\033[91m", # red
+        "\033[93m", # yellow
+        "\033[92m", # green
+        "\033[94m", # blue
+        "\033[95m", # magenta
+        "\033[96m", # cyan
+        "\033[97m", # white
+        "\033[90m", # black
+    ]
+    # max of value is len(chars) but need to scale down to len(colors)
+    return colors[value] + char + "\033[0m"
 
 def print_grid(self):
     #self.grid = [[0 for x in range(10)] for y in range(10)]
@@ -28,12 +44,12 @@ def print_grid(self):
             # if cell is revealed
             if (self.grid[x-1][y-1][1] == self.cell_status.CELL_STATUS_REVEALED):
                 if (self.grid[x-1][y-1][0] == -1):
-                    print_grid[x][y] = "M"
+                    print_grid[x][y] = colored_char("M", 0)
                 elif (self.grid[x-1][y-1][0] == 0):
                     print_grid[x][y] = "." # no mines around
                 else:
-                    print_grid[x][y] = str(self.grid[x-1][y-1][0])
+                    print_grid[x][y] = colored_char(str(self.grid[x-1][y-1][0]), 2)
             elif (self.grid[x-1][y-1][1] == self.cell_status.CELL_STATUS_FLAGGED):
-                print_grid[x][y] = "F"
+                print_grid[x][y] = colored_char("F", 1)
 
     print(tabulate.tabulate(print_grid, tablefmt="grid"))
