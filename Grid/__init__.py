@@ -18,6 +18,6 @@ class Grid:
 
     ##############################
 
-
+    from .place_mines import place_mines
     
 
