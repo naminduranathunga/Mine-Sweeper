@@ -13,7 +13,7 @@ def menu(self):
         choice = input("Enter your choice (1-4): ")
 
         if choice == '1':
-            game = print_grid(10, 12)
+            game = Grid.Grid(10, 12)
             game.start_game()
         elif choice == '2':
             game = print_grid(15, 18)

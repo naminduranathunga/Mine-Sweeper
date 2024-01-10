@@ -4,6 +4,6 @@ Test Print grid
 import Grid
 
 
-cg = Grid.CellGrid()
+cg = Grid.Grid()
 cg.print_grid()
 
