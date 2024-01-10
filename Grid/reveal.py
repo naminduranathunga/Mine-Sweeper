@@ -13,14 +13,6 @@ def reveal(self, x, y):
         # throw exception
         raise Exception("Invalid cell")
     
-    # check if the cell is already revealed
-    if self.grid[x][y][1] != self.cell_status.CELL_STATUS_REVEALED:
-        # reveal the cell
-        self.grid[x][y][1] = self.cell_status.CELL_STATUS_REVEALED
+    return self.reveal_cells_recursive(x, y)
     
-    # check whether it is a mine
-    return not (self.grid[x][y][0] == -1)
-    #if self.grid[x][y][0] == -1: # mine
-    #    return False # game over
-    #else:
-    #    return True
+   

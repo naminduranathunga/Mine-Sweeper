@@ -1,3 +1,9 @@
+"""
+Function will place mines
+
+Author:
+W.A.H.K.Weerasinghe - 21/ENG/159
+"""
 import random
 def place_mines(self):
 
